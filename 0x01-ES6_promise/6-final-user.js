@@ -13,7 +13,7 @@ function handleProfileSignup(firstName, lastName, fileName) {
       value:
         eachPromise.status === 'fulfilled'
           ? eachPromise.value
-          : eachPromise.reason,
+          : +eachPromise.reason,
     }))
   );
 }
