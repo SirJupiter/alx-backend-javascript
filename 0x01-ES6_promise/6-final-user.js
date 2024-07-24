@@ -10,9 +10,10 @@ function handleProfileSignup(firstName, lastName, fileName) {
   ]).then((data) =>
     data.map((eachPromise) => ({
       status: eachPromise.status,
-      value: eachPromise.value
-        ? eachPromise.status === 'fulfilled'
-        : eachPromise.reason,
+      value:
+        eachPromise.status === 'fulfilled'
+          ? eachPromise.value
+          : eachPromise.reason,
     }))
   );
 }
