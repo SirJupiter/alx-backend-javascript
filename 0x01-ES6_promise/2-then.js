@@ -3,12 +3,13 @@
 function handleResponseFromAPI(promise) {
   promise
     .then((resolution) => {
-      console.log('Got a response from the API');
       return { status: 200, body: 'success' };
     })
     .catch((error) => {
-      {
-      }
+      new Error();
+    })
+    .finally(() => {
+      console.log('Got a response from the API');
     });
 }
 
