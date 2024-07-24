@@ -1,12 +1,10 @@
 /* eslint-disable */
 
 function handleResponseFromAPI(promise) {
-  promise
-    .then((resolution) => {
-      return { status: 200, body: 'success' };
-    })
+  return promise
+    .then((resolution) => ({ status: 200, body: 'success' }))
     .catch((error) => {
-      return new Error();
+      new Error();
     })
     .finally(() => {
       console.log('Got a response from the API');
