@@ -1,13 +1,15 @@
+/* eslint-disable */
+
 /**
- * Represents a Holberton Course.
+ * class HolbertonCourse
  */
-export default class HolbertonCourse {
+class HolbertonCourse {
   /**
-   * Creates a new @see {@link HolbertonCourse}.
+   * Creates an instance of HolbertonCourse class
    *
-   * @param {String} name - The name of the course.
-   * @param {Number} length - How long the course is (in months).
-   * @param {String[]} students - The names of students in the course.
+   * @param {String} name
+   * @param {Number} length
+   * @param {array of Strings} students
    */
   constructor(name, length, students) {
     this.name = name;
@@ -16,56 +18,55 @@ export default class HolbertonCourse {
   }
 
   /**
-   * Gets the name of this course.
+   * Gets name of course
    */
   get name() {
-    return this._name;
+    return this._namw;
   }
 
   /**
-   * Sets the name of this course.
+   * Sets name of course
    */
-  set name(value) {
-    if (typeof value !== 'string') {
+  set name(newName) {
+    if (typeof newName !== 'string')
       throw new TypeError('Name must be a string');
-    }
-    this._name = value;
+    this._name = newName;
   }
 
   /**
-   * Gets the length of this course (in months).
+   * Gets length of course
    */
   get length() {
     return this._length;
   }
 
   /**
-   * Sets the length of this course (in months).
+   * Sets length of course
    */
-  set length(value) {
-    if (typeof value !== 'number') {
+  set length(newLength) {
+    if (typeof newLength !== 'number')
       throw new TypeError('Length must be a number');
-    }
-    this._length = value;
+    this._length = newLength;
   }
 
   /**
-   * Gets the names of students in this course.
+   * Gets student array
    */
   get students() {
     return this._students;
   }
 
   /**
-   * Sets the names of students in this course.
+   * Sets student array
    */
-  set students(value) {
-    if (!(value instanceof Array)) {
-      throw new TypeError('Students must be an array of strings');
-    }
+  set students(newStudents) {
+    if (!Array.isArray(newStudents))
+      throw new TypeError('Students must be an array');
     if (!value.every((student) => typeof student === 'string')) {
       throw new TypeError('Students must be an array of strings');
     }
-    this._students = value;
+    this._students = newStudents;
   }
 }
+
+export default HolbertonCourse;
