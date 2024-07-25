@@ -12,17 +12,9 @@ class HolbertonCourse {
    * @param {array of Strings} students
    */
   constructor(name, length, students) {
-    if (typeof name === 'string') {
-      this.name = name;
-    }
-
-    if (typeof length === 'number') {
-      this.length = length;
-    }
-
-    if (Array.isArray(students)) {
-      this.students = students;
-    }
+    this.name = name;
+    this.length = length;
+    this.students = students;
   }
 
   /**
