@@ -61,7 +61,7 @@ class HolbertonCourse {
    * Sets student array
    */
   set students(newStudents) {
-    if (!Array.isArray(newStudents))
+    if (!newStudents instanceof Array)
       throw new TypeError('Students must be an array');
 
     this._students = newStudents;
