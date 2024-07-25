@@ -1,4 +1,5 @@
 /* eslint-disable */
+/* eslint-disable no-unused-vars */
 
 /**
  * class HolbertonCourse
@@ -62,9 +63,7 @@ class HolbertonCourse {
   set students(newStudents) {
     if (!Array.isArray(newStudents))
       throw new TypeError('Students must be an array');
-    if (!value.every((student) => typeof student === 'string')) {
-      throw new TypeError('Students must be an array of strings');
-    }
+
     this._students = newStudents;
   }
 }
