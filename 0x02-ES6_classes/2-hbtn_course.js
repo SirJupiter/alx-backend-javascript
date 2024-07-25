@@ -5,23 +5,16 @@
  */
 class HolbertonCourse {
   /**
+   * Creates an instance of HolbertonCourse class
    *
    * @param {String} name
    * @param {Number} length
    * @param {array of Strings} students
    */
   constructor(name, length, students) {
-    if (typeof name === 'string') {
-      this._name = name;
-    }
-
-    if (typeof length === 'number') {
-      this._length = length;
-    }
-
-    if (Array.isArray(students)) {
-      this._students = students;
-    }
+    this._name = name;
+    this._length = length;
+    this._students = students;
   }
 
   /**
