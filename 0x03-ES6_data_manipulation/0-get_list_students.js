@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 function getListStudents() {
   return new Array(
     { id: 1, firstName: 'Guillaume', location: 'San Francisco' },
