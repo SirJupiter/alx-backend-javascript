@@ -1,3 +1,4 @@
+/* eslint-disable */
 /**
  * Contains the miscellaneous route handlers.
  */
