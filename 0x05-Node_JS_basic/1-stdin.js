@@ -1,3 +1,4 @@
+/* eslint-disable */
 /**
  * Executes through the command line
  */
